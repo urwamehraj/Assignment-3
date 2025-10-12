@@ -46,8 +46,3 @@ Greet.addEventListener('click',()=>{
         Empty();
       }
 })
-
-
-  
-
-    }
