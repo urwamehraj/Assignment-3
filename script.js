@@ -31,14 +31,23 @@ G.addEventListener('click',()=>{
   B.style.backgroundColor="white";
   G.style.backgroundColor="Green";
 });
+function Empty(){
+   const input = document.getElementById('UserName');
+  input.value = '';
+  }
+const Greet = document.getElementById ("greet");
+Greet.addEventListener('click',()=>{
+  const name = document.getElementById ("UserName").value;
+   if (name.trim() !== "") {
+        H1.textContent = `Hello, ${name}!`;
+        Empty();
+      } else {
+        H1.textContent = "Hello!";
+        Empty();
+      }
+})
 
-  function Greet(){
-  const User = document.getElementById("UserName");
-  const name = User.value;
-  document.getElementById("hello").innerText +=  name;
-  }  
 
-    function Empty(){
-      const input = document.getElementById("UserName");
-      input.value="";
+  
+
     }
