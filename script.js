@@ -5,8 +5,6 @@ const R = document.getElementById("red");
 const B = document.getElementById("blue");
 const G = document.getElementById("green");
 const Y = document.getElementById("yellow");
-const btn1 = document.getElementById("greet");
-const H1 =document.getElementById("hello");
 R.addEventListener('click',()=>{
   R.style.backgroundColor="red";
   Y.style.backgroundColor="white";
@@ -59,4 +57,5 @@ Greet.addEventListener("click", () => {
     alert("Please enter your name");
   }
 });
+
 
