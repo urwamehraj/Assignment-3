@@ -32,17 +32,31 @@ G.addEventListener('click',()=>{
   G.style.backgroundColor="Green";
 });
 function Empty(){
-   const input = document.getElementById('UserName');
-  input.value = '';
+const input = document.getElementById("UserName").value;
+input ='';
+}
+const Greet = document.getElementById("greet");
+const H1 = document.getElementById("hello");
+const userInput = document.getElementById("UserName");
+
+let isPrinted = false; // track first click
+
+Greet.addEventListener("click", () => {
+  const name = userInput.value.trim();
+
+  // First click → print
+  if (!isPrinted && name !== "") {
+    H1.textContent = `Hello, ${name}!`;
+    isPrinted = true;
   }
-const Greet = document.getElementById ("greet");
-Greet.addEventListener('click',()=>{
-  const name = document.getElementById ("UserName").value;
-   if (name.trim() !== "") {
-        H1.textContent = `Hello, ${name}!`;
-        Empty();
-      } else {
-        H1.textContent = "Hello!";
-        Empty();
-      }
-})
+  // Second click → clear
+  else if (isPrinted) {
+    userInput.value = "";
+    isPrinted = false;
+  }
+  // Empty input
+  else {
+    alert("Please enter your name");
+  }
+});
+
