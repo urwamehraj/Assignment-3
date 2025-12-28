@@ -7,26 +7,16 @@ const G = document.getElementById("green");
 const Y = document.getElementById("yellow");
 R.addEventListener('click',()=>{
   R.style.backgroundColor="red";
-  Y.style.backgroundColor="white";
-  B.style.backgroundColor="white";
-  G.style.backgroundColor="white";
 })
 Y.addEventListener('click',()=>{
-  R.style.backgroundColor="white";
   Y.style.backgroundColor="Yellow";
-  B.style.backgroundColor="white";
-  G.style.backgroundColor="white";
+  
 })
 B.addEventListener('click',()=>{
-  R.style.backgroundColor="White";
-  Y.style.backgroundColor="white";
   B.style.backgroundColor="Blue";
-  G.style.backgroundColor="white";
+
 })
 G.addEventListener('click',()=>{
-  R.style.backgroundColor="white";
-  Y.style.backgroundColor="white";
-  B.style.backgroundColor="white";
   G.style.backgroundColor="Green";
 });
 function Empty(){
@@ -57,5 +47,6 @@ Greet.addEventListener("click", () => {
     alert("Please enter your name");
   }
 });
+
 
 
